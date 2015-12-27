@@ -17,16 +17,6 @@
                                 - {{ $content->created_at->diffInMonths(\Carbon\Carbon::now()) >= 1 ? $content->created_at->format('j M Y') : $content->created_at->diffForHumans() }}</p>
                         </div>
                         <div class="comments">
-<<<<<<< Updated upstream
-                            {{ $comments }}
-                            {{--@foreach($comments as $comment)--}}
-                            {{--<div class="comment">--}}
-                            {{--<p>{{ $comment->name }}</p>--}}
-                            {{--<p>{{ $comment->created_at->diffInMonths(\Carbon\Carbon::now()) >= 1 ? $comment->created_at->format('j M Y') : $comment->created_at->diffForHumans() }}</p>--}}
-                            {{--<p>{{ $comment->body }}</p>--}}
-                            {{--</div>--}}
-                            {{--@endforeach--}}
-=======
                             <form class="form-horizontal" role="form" method="POST" action="{{ url('/content/', $content->id ) }}">
                                 {!! csrf_field() !!}
 
@@ -54,7 +44,6 @@
                             <p>{{ $comment->body }}</p>
                             </div>
                             @endforeach
->>>>>>> Stashed changes
                         </div>
                     </div>
                 </div>

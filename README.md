@@ -1,6 +1,6 @@
 # PieterCMS
 
-https://github.com/PieterVDE/PieterCMS
+https://github.com/PieterVDE/PieterCMS2
 
 An extra assignment for the course PHP 2 given in IMD @ Thomas More, Mechelen.
 
