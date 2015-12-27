@@ -17,6 +17,33 @@
                                 - {{ $content->created_at->diffInMonths(\Carbon\Carbon::now()) >= 1 ? $content->created_at->format('j M Y') : $content->created_at->diffForHumans() }}</p>
                         </div>
                         <div class="comments">
+                            <form class="form-horizontal" role="form" method="POST" action="{{ url('/comment') }}">
+                                {!! csrf_field() !!}
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Enter Comment</label>
+
+                                    <div class="col-md-6">
+                                        <input id="{{$postid}}" name="postid" type="hidden" value="{{$postid}}">
+                                        <input type="comment" class="form-control" name="comment"
+                                               value="{{ old('comment') }}">
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="fa fa-btn"></i>Add comment
+                                        </button>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        @for ($i = 0; $i < count($comment); $i++)
+                                            <p>{{$comment[$i]->comment}}</p>
+                                        @endfor
+
+                                    </div>
+
+                                </div>
+
+
+                            </form>
+
                             {{ $comments }}
                             {{--@foreach($comments as $comment)--}}
                             {{--<div class="comment">--}}
