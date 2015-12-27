@@ -52,6 +52,7 @@ class AuthController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
+            'registration_code' => 'required|in:' . env('REGISTER_CODE'),
         ]);
     }
 

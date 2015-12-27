@@ -14,7 +14,7 @@
                             <label class="col-md-4 control-label">Name</label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="name" value="{{ old('name') }}">
+                                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Name">
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
@@ -28,7 +28,7 @@
                             <label class="col-md-4 control-label">E-Mail Address</label>
 
                             <div class="col-md-6">
-                                <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="E-mail">
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -42,7 +42,7 @@
                             <label class="col-md-4 control-label">Password</label>
 
                             <div class="col-md-6">
-                                <input type="password" class="form-control" name="password">
+                                <input type="password" class="form-control" name="password" placeholder="Password">
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -56,11 +56,25 @@
                             <label class="col-md-4 control-label">Confirm Password</label>
 
                             <div class="col-md-6">
-                                <input type="password" class="form-control" name="password_confirmation">
+                                <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm password">
 
                                 @if ($errors->has('password_confirmation'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password_confirmation') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('registration_code') ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Registration code</label>
+
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="registration_code" placeholder="Registration code">
+
+                                @if ($errors->has('registration_code'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('registration_code') }}</strong>
                                     </span>
                                 @endif
                             </div>
