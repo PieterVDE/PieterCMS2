@@ -6,11 +6,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h1 class="page-title">Details about content</h1>
+                <h1 class="page-title">{{ $content->title }}</h1>
                 <div class="panel panel-default">
-                    <div class="panel-heading">Detail</div>
+                    <div class="panel-heading">{{ $content->title }}</div>
                     <div class="panel-body">
-                        <p>Coming soon!</p>
+                        @include('content._selector')
                     </div>
                 </div>
             </div>

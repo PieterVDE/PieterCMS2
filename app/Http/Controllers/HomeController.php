@@ -25,8 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $content = Content::latest('published_at')->published()->get();
+        $contents = Content::latest('published_at')->published()->get();
 
-        return view('home', compact('content'));
+        return view('home', compact('contents'));
     }
 }

@@ -24,9 +24,9 @@ Het mini CMS moet voldoen aan volgende voorwaarden:
 - Zorg dat je je code upload via toledo
 - ~~Registratie is enkel mogelijk indien een geheime code gekend is (documenteer deze code in je README.MD~~)
     - Na registratie kan je content toevoegen als volgt:
-        - /content/add
-        - Zorg voor een view met een tekstvak “URL” en een button ­ niets meer
-        - Zorg voor een databank migratie voor tabel content met velden id, url, type, user_id
+        - ~~/content/add~~
+        - ~~Zorg voor een view met een tekstvak “URL” en een button ­ niets meer~~
+        - ~~Zorg voor een databank migratie voor tabel content met velden id, url, type, user_id~~
         - Na het verzenden van het formulier wordt automatisch de titel uitgelezen van de URL die in het tekstvak werd getypt (basic scraping van de title tag)
     - Content moet op de homepage in blog­stijl getoond worden als volgt
         - ~~Voor YouTube: een titel met het filmpje~~

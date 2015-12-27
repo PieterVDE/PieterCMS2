@@ -14,28 +14,17 @@
                 @endif
                 <h1 class="page-title">Dashboard</h1>
 
-                @foreach($content as $c)
+                @foreach($contents as $content)
                     <div class="panel panel-default">
-                        <div class="panel-heading">{{ $c->title }}</div>
+                        <div class="panel-heading">{{ $content->title }}</div>
 
                         <div class="panel-body">
-                            @if($c->type == "YouTube")
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $c->body }}"
-                                        frameborder="0" allowfullscreen></iframe>
-                            @elseif($c->type == "Vimeo")
-                                <iframe src="https://player.vimeo.com/video/{{ $c->body }}?badge=0" width="560"
-                                        height="280" frameborder="0" allowfullscreen></iframe>
-                            @elseif($c->type == "Soundcloud")
-                                <iframe width="100%" height="166" scrolling="no" frameborder="no"
-                                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ $c->body }}"></iframe>
-                            @else
-                                <img src="{{ $c->body }}" alt="Placeholder">
-                            @endif
+                            @include('content._selector')
                         </div>
                     </div>
-                    @if($c->id % 2 == 0)
+                    @if($content->id % 2 == 0)
                         <div class="clearfix visible-md-block"></div>
-                    @elseif($c->id % 3 == 0)
+                    @elseif($content->id % 3 == 0)
                         <div class="clearfix visible-lg-block"></div>
                     @endif
                 @endforeach
