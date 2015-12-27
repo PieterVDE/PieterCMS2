@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 /*
@@ -25,7 +25,8 @@ Route::get('/', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
 
-Route::group(['middleware' => ['web']], function () {
-    //
+    Route::get('/home', 'HomeController@index');
 });
