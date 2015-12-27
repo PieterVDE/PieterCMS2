@@ -21,13 +21,20 @@
 |
 */
 Route::group(['middleware' => 'web'], function () {
-    Route::get('/', function () {
-        return view('index');
+    //Homepage
+    Route::get('/', 'HomeController@index');
+    Route::get('/home', function () {
+        return redirect('/');
     });
 
+    // Authentication
     Route::auth();
 
-    Route::get('/home', 'HomeController@index');
-
     //Content
+    Route::get('content/add', 'ContentController@create');
+    Route::post('content/add', 'ContentController@store');
+    Route::get('content/{id}', 'ContentController@show');
+    Route::get('content/{id}/edit', 'ContentController@edit');
+    Route::post('content/{id}/edit', 'ContentController@update');
+    Route::post('content/{id}/delete', 'ContentController@delete');
 });

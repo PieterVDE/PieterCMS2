@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Home | PieterCMS')
+
 @section('content')
     <div class="container spark-screen">
         <div class="row">
