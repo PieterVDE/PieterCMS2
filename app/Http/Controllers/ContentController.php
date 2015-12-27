@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
 use App\Content;
+use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -63,7 +65,10 @@ class ContentController extends Controller
     public function show($id)
     {
         $content = Content::findOrFail($id);
-        return view('content.detail', compact('content'));
+        $uploader = User::find($content->user_id);
+        $comments = Comment::all()->where('content_id', '=', $id);
+
+        return view('content.detail', compact('content', 'uploader', 'comments'));
     }
 
     //Route::get('content/{id}/edit', 'ContentController@edit');
