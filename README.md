@@ -1,27 +1,38 @@
-## Laravel PHP Framework
+# PieterCMS
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+https://github.com/PieterVDE/PieterCMS
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+An extra assignment for the course PHP 2 given in IMD @ Thomas More, Mechelen.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+### Registration code:
 
-## Official Documentation
+One does not simply create an account on PieterCMS - https://i.imgflip.com/w688u.jpg
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+```
+    Registration code: p1373rcm515l0v3
+```
 
-## Contributing
+Use the above code to register for an account on PieterCMS. 
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+----
 
-## Security Vulnerabilities
+## Mini scraping CMS
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+Het mini CMS moet voldoen aan volgende voorwaarden:
+- ~~Zet je code op een publieke GIT repository, zet de link naar je repo in je README.MD~~
+- **Deadline: 27 december**
+- Zorg dat je je code upload via toledo
+- Registratie is enkel mogelijk indien een geheime code gekend is (~~documenteer deze code in je README.MD~~)
+    - Na registratie kan je content toevoegen als volgt:
+        - /content/add
+        - Zorg voor een view met een tekstvak “URL” en een button ­ niets meer
+        - Zorg voor een databank migratie voor tabel content met velden id, url, type, user_id
+        - Na het verzenden van het formulier wordt automatisch de titel uitgelezen van de URL die in het tekstvak werd getypt (basic scraping van de title tag)
+    - Content moet op de homepage in blog­stijl getoond worden als volgt
+        - Voor YouTube: een titel met het filmpje
+        - Voor Vimeo: een titel met het filmpje
+        - Voor Soundcloud: een titel met de soundcloud audio player (check de embed code)
+        - Voor andere links: een titel met de eerste afbeelding die je in de website tegenkomt
+    - Het moet mogelijk zijn comments achter te laten (dit mag anoniem zijn)
 
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Ga zelf op zoek naar hoe je de nodige data kan verzamelen. Een tip kan zijn om `DOMDocument` te gebruiken maar het is niet verplicht.
