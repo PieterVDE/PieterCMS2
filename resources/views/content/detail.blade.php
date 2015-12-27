@@ -17,7 +17,8 @@
                                 - {{ $content->created_at->diffInMonths(\Carbon\Carbon::now()) >= 1 ? $content->created_at->format('j M Y') : $content->created_at->diffForHumans() }}</p>
                         </div>
                         <div class="comments">
-                            <form class="form-horizontal" role="form" method="POST" action="{{ url('/content/', $content->id ) }}">
+                            <h2>Comments</h2>
+                            <form class="form-horizontal" role="form" method="POST" action="{{ url('/content', $content->id ) }}">
                                 {!! csrf_field() !!}
 
                                 <div class="form-group">
