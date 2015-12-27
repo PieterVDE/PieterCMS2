@@ -21,7 +21,7 @@ class CreateCommentsTable extends Migration
 
             //Add foreign key for content id
             $table->integer('content_id')->unsigned();
-            $table->foreign('content_id')->references('id')->on('content');
+            $table->foreign('content_id')->references('id')->on('contents');
 
             $table->string('body');
             $table->timestamps();
