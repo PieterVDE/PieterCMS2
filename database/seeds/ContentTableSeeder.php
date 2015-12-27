@@ -53,7 +53,7 @@ class ContentTableSeeder extends Seeder
                     'id' => '4',
                     'url' => 'https://soundcloud.com/skrillex/avicii-levels-skrillex-remix',
                     'title' => 'Avicii &#39;Levels&#39; Skrillex Remix by Skrillex | Free Listening on SoundCloud',
-                    'content' => '34019569',
+                    'content' => 'https://soundcloud.com/skrillex/avicii-levels-skrillex-remix',
                     'type' => 'Soundcloud',
                     'user_id' => '3',
                     'created_at' => Carbon::now()->format('Y-m-d H:i:s'),

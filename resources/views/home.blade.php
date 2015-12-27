@@ -21,6 +21,9 @@
                         <div class="panel-body">
                             @include('content._selector')
                         </div>
+                        <div class="panel-footer">
+                            <a href="{{ url('/content', $content->id) }}" class="btn btn-primary">See more &raquo;</a>
+                        </div>
                     </div>
                     @if($content->id % 2 == 0)
                         <div class="clearfix visible-md-block"></div>

@@ -12,7 +12,6 @@
                     <div class="panel-body">
                         <p>Have something interesting to share? Please do!</p>
                         <p>Complete the form below and your content will be shining on the front page in no time.</p>
-
                         <form class="form-horizontal" role="form" method="POST" action="{{ url('/content/add') }}">
                             {!! csrf_field() !!}
 

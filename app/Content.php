@@ -7,7 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Content extends Model
 {
-    protected $fillable = [ 'url' ];
+    protected $fillable = [
+        'url',
+        'title',
+        'type',
+        'body',
+        'user_id',
+        'published_at'
+    ];
     protected $dates = ['published_at'];
 
     public function scopePublished($query)
