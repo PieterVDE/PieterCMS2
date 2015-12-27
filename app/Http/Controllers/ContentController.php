@@ -66,7 +66,16 @@ class ContentController extends Controller
     {
         $content = Content::findOrFail($id);
         $uploader = User::find($content->user_id);
-        $comments = Comment::all()->where('content_id', '=', $id);
+        $comments = \DB::table('comments')
+            ->where('content_id', $id)
+            ->leftJoin('users', 'users.id', '=', 'comments.user_id')
+            ->select('comments.id', 'users.name', 'users.id', 'comments.content_id', 'comments.body', 'comments.created_at')
+            ->orderBy('comments.created_at', 'desc')
+            ->get();
+
+        foreach($comments as $comment) {
+            $comment->created_at = Carbon::parse($comment->created_at);
+        }
 
         return view('content.detail', compact('content', 'uploader', 'comments'));
     }

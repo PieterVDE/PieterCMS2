@@ -37,4 +37,7 @@ Route::group(['middleware' => 'web'], function () {
 //    Route::get('content/{id}/edit', 'ContentController@edit');
 //    Route::post('content/{id}/edit', 'ContentController@update');
 //    Route::post('content/{id}/delete', 'ContentController@delete');
+
+    //Comments
+    Route::post('content/{id}', 'CommentsController@store');
 });
