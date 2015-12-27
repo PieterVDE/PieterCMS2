@@ -1,2 +1,13 @@
-.DS_STORE
+/vendor
+/node_modules
+/bower_components
+
+.idea/
+.idea/workspace.xml
 .vagrant
+.env
+.DS_Store
+composer.lock
+.env.example
+.phpstorm.meta.php
+_ide_helper.php
