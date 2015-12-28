@@ -3,7 +3,7 @@
 **Repo URL:** https://github.com/PieterVDE/PieterCMS2
 
 The latest, most updated version can be found under **https://github.com/PieterVDE/PieterCMS2/tree/feature-comments**
-Reason: All these changes were made after the official deadline. Last commit: 2u30 after official deadline.
+Reason: All these changes were made after the official deadline. Last commit: 2u30 (about 1:30AM) after official deadline.
 
 **What does this branch have more than the master branch?**
 
