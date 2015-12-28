@@ -1,0 +1,62 @@
+@mixin bp-small {
+  @media only screen and(min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and(min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin bp-normal {
+  @media only screen and(min-width: 960px) {
+    @content;
+  }
+}
+
+@mixin bp-large {
+  @media only screen and(min-width: 1200px) {
+    @content;
+  }
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin fontsize($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin position($position, $args) {
+  @each $o in top right bottom left {
+    $i: index($args, $o);
+
+    @if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number  {
+      #{$o}: nth($args, $i + 1);
+    }
+  }
+
+  position: $position;
+}
+
+@mixin absolute($args) {
+  @include position("absolute", $args);
+}
+
+@mixin fixed($args) {
+  @include position("fixed", $args);
+}
+
+@mixin relative($args) {
+  @include position("relative", $args);
+}

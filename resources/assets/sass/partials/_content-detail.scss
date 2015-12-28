@@ -1,0 +1,35 @@
+.panel {
+  .panel-body {
+    .info {
+      margin: 16px 0 30px;
+    }
+    .comments {
+      text-align: left;
+      padding: 0 16px 16px;
+      border-top: 1px solid #292626;
+
+      h2 {
+        margin-bottom: 30px;
+      }
+
+      form {
+
+      }
+
+      .comment {
+        margin: 6px;
+        border: 1px solid #292626;
+
+        p {
+          padding: 6px 12px;
+          margin: 0;
+          &:first-child {
+            padding: 8px;
+            background-color: #292626;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
